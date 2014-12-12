@@ -1,0 +1,15 @@
+<head>
+    <title>
+    Search Engine
+    </title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body background="/static/leaves.jpg">
+    <h1>Here are your results</h1>
+        {% for page in result %}
+        <ul>
+            <li><a href={{page.url}}>{{page.title}}</a></li>
+            {{page.description}}
+        </ul>
+        {% endfor %}
+</body>

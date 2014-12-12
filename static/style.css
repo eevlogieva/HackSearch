@@ -1,0 +1,18 @@
+body{
+    /*background: #8ADEA4*/
+}
+h1{
+    text-align: center;
+    font-style: italic serif;
+    font-size: 60px
+}
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px
+}
+form{
+    text-align: center
+}
