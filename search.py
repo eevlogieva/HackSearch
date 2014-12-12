@@ -8,7 +8,8 @@ from sqlalchemy.orm import Session
 from make_database import Base, Page
 from sqlalchemy import create_engine
 
-from local_settings import ip, port, debug
+from local_settings import host, port, debug
+
 
 @app.route("/")
 def load_page():
@@ -26,4 +27,4 @@ def search():
 
 
 if __name__ == "__main__":
-    app.run(debug=debug, ip=ip, port=port)
+    app.run(debug=debug, host=host, port=port)

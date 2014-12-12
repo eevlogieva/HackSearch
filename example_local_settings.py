@@ -1,3 +1,3 @@
 debug = True
-ip = "localhost"
+host = "localhost"
 port = 5000
