@@ -10,7 +10,7 @@ class Crawler:
         self.website = url
         self.domain = "{0.netloc}".format(urlsplit(url))
         self.scanned_pages = []
-        self.to_scan_pages = []
+        self.to_scan_pages = set()
         all_websites = self.session.query(Website).all()
         if self.domain not in all_websites:
             self.session.add(Website(url=self.domain))
@@ -37,8 +37,7 @@ class Crawler:
                 href = "/"
             next_url = self.href_2_url(page_url, href)
             if not self.is_out_going(next_url) and next_url not in self.scanned_pages and "#" not in next_url:
-                # self.scan_page(next_url)
-                self.to_scan_pages.append(next_url)
+                self.to_scan_pages.add(next_url)
 
     def save_soup(self, soup, page_url):
         try:

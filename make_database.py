@@ -20,4 +20,4 @@ class Page(Base):
 
     title = Column(String)
     description = Column(String)
-    url = Column(String)
+    url = Column(String, unique=True)
